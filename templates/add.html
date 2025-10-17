@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajouter un produit - Sweetching</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo-box">
+      <h1 class="logo-text">Sweetching</h1>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/add">Add</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Ajouter un produit</h2>
+    <form method="POST" action="/add" class="add-form">
+      <label for="name">Nom du produit :</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="description">Description :</label>
+      <textarea id="description" name="description" required></textarea>
+
+      <label for="price">Prix (€) :</label>
+      <input type="number" step="0.01" id="price" name="price" required>
+
+      <label for="stock">Stock :</label>
+      <input type="number" id="stock" name="stock" required>
+
+      <label for="discount">Réduction (%) :</label>
+      <input type="number" id="discount" name="discount">
+
+      <label for="image">Nom du fichier image :</label>
+      <input type="text" id="image" name="image" placeholder="ex: 16A.webp">
+
+      <button class="btn" type="submit">Ajouter</button>
+    </form>
+  </main>
+
+</body>
+</html>
